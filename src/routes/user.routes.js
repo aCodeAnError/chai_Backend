@@ -1,12 +1,12 @@
-import { Router } from "express" // imported router from Router 
+import { Router } from "express" // imported router from express 
 import { registerUser } from "../controllers/user.controller.js"
-import { upload } from "../middlewares/multer.middlerware.js"
+import { upload } from "../middlewares/multer.middleware.js"
 
 const router = Router() // created a router variabele in router is stored
 
 router.route("/register").post(
     upload.fields([
-        {
+        { 
             name: "avatar",
             maxCount: 1
         },
